@@ -25,4 +25,5 @@ package dev.digitality.digitalgui.api;
 
 import org.bukkit.inventory.InventoryHolder;
 
-public interface IGUI extends InventoryHolder {}
+public interface IGUI extends InventoryHolder {
+}

@@ -40,13 +40,12 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class DigitalGUI {
-    private static final Logger LOGGER = Logger.getLogger("DigitalGUI");
-
     /**
      * The item mapper, which is used to recognize which item was clicked based on NBT tag.
      */
     @Getter
     public static final HashMap<UUID, InteractiveItem> itemMapper = new HashMap<>();
+    private static final Logger LOGGER = Logger.getLogger("DigitalGUI");
 
     /**
      * Important to call in onEnable to register the GUI listener.
@@ -54,7 +53,7 @@ public class DigitalGUI {
      * @param plugin The plugin instance.
      */
     public static void register(Plugin plugin) {
-        if (Arrays.equals(DigitalGUI.class.getPackage().getName().split("\\."), new String[] {"dev", "digitality", "digitalgui"})) // Relocation relocates strings too, so we have to use the array method. Credits: Item-NBT-API, bStats
+        if (Arrays.equals(DigitalGUI.class.getPackage().getName().split("\\."), new String[]{"dev", "digitality", "digitalgui"})) // Relocation relocates strings too, so we have to use the array method. Credits: Item-NBT-API, bStats
             LOGGER.log(Level.SEVERE, "DigitalGUI was shaded but not transformed! This is prone to errors! Please nag the author of " + plugin.getName() + " to use the relocation according to README!");
 
         Bukkit.getPluginManager().registerEvents(new GUIClickListener(), plugin);

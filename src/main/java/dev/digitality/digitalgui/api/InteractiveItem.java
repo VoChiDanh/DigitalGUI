@@ -42,7 +42,8 @@ import java.util.*;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
-@Getter @Setter
+@Getter
+@Setter
 public class InteractiveItem extends ItemStack {
     /**
      * The slot of the item in the GUI. Optional, but recommended. Defaults to -1.
